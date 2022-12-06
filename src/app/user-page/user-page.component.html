@@ -1,0 +1,470 @@
+<!--
+=========================================================
+* Material Dashboard 2 - v3.0.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/material-dashboard
+* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://www.creative-tim.com/license)
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <!-- Nucleo Icons -->
+  <link href="/assets/user-page/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="/assets/user-page/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <!-- CSS Files -->
+  <link id="pagestyle" href="/assets/user-page/css/material-dashboard.css?v=3.0.0" rel="stylesheet" />
+
+
+<body class="g-sidenav-show  bg-gray-200">
+  <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
+    <div class="sidenav-header">
+      <i class="fas fa-times p-3 cursor-pointer text-dark  opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+      <a class="navbar-brand m-0">
+        <img src="/assets/images/logoSPA.png" styles="height: 200px;" class="navbar-brand-img h-100" alt="main_logo">
+        <span class="ms-1 font-weight-bold text-dark ">Área do usuário</span>
+      </a>
+    </div>
+    <hr class="horizontal light mt-0 mb-2">
+    <div class="collapse navbar-collapse  w-auto  max-height-vh-100" id="sidenav-collapse-main">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-dark  active bg-gradient-primary" href="../pages/dashboard.html">
+            <div class="text-dark  text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">dashboard</i>
+            </div>
+            <span class="nav-link-text ms-1">Principal</span>
+          </a>
+        </li>
+
+        <li class="nav-item mt-3">
+          <h6 class="ps-4 ms-2 text-uppercase text-xs text-dark  font-weight-bolder opacity-8">Perfil</h6>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark  " href="../pages/profile.html">
+            <div class="text-dark  text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">person</i>
+            </div>
+            <span class="nav-link-text ms-1">Dados</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark  " (click) = "logout()">
+            <div class="text-dark e text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">logout</i>
+            </div>
+            <span class="nav-link-text ms-1">Sair</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="sidenav-footer position-absolute w-100 bottom-0 ">
+      <div class="mx-3">
+        <a class="btn bg-gradient-primary mt-4 w-100" href="" type="button">Entre em contato</a>
+      </div>
+    </div>
+  </aside>
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+
+    <!-- End Navbar -->
+    <div class="container-fluid py-4">
+      <div class="row">
+        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+          <div class="card">
+            <div class="card-header p-3 pt-2">
+              <div class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
+                <i class="material-icons opacity-10">payments</i>
+              </div>
+              <div class="text-end pt-1">
+                <p class="text-sm mb-0 text-capitalize">Créditos</p>
+                <h4 class="mb-0">R$ {{creditos}}</h4>
+              </div>
+            </div>
+            <hr class="dark horizontal my-0">
+            <div class="card-footer p-3">
+              <p class="mb-0">Válidos até <span class="text-success text-sm font-weight-bolder">20/12/2023</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+          <div class="card">
+            <div class="card-header p-3 pt-2">
+              <div class="icon icon-lg icon-shape bg-gradient-primary shadow-primary text-center border-radius-xl mt-n4 position-absolute">
+                <i class="material-icons opacity-10">card_membership</i>
+              </div>
+              <div class="text-end pt-1">
+                <p class="text-sm mb-0 text-capitalize">Plano atual</p>
+                <h4 class="mb-0">Plano <span style="color: gold;">Ouro</span></h4>
+              </div>
+            </div>
+            <hr class="dark horizontal my-0">
+            <div class="card-footer p-3">
+              <p class="mb-0">Renova dia <span class="text-success text-sm font-weight-bolder">20/12/2022</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+          <div class="card">
+            <div class="card-header p-3 pt-2">
+              <div class="icon icon-lg icon-shape bg-gradient-success shadow-success text-center border-radius-xl mt-n4 position-absolute">
+                <i class="material-icons opacity-10">apartment</i>
+              </div>
+              <div class="text-end pt-1">
+                <p class="text-sm mb-0 text-capitalize">Vínculo</p>
+                <h4 class="mb-0">Maxmeio</h4>
+              </div>
+            </div>
+            <hr class="dark horizontal my-0">
+            <div class="card-footer p-3">
+              <p class="mb-0">Membro há <span class="text-success text-sm font-weight-bolder">1 mês</span></p>
+            </div>
+          </div>
+        </div>
+        <!-- aaaaaaaaaaaaaaaaa -->
+        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+          <div class="card" style="max-width: 150px;">
+            <img src="/assets/images/logoSPA.png" height="140" width="150" alt="main_logo">
+           </div>
+        </div>
+        <!-- aaaaaaaaaaaaaaaaa -->
+
+      </div>
+
+      <div class="row mt-4">
+         <!-- ------------------------------------------------ -->
+        <div class="col-lg-4 col-md-6 mt-4 mb-4">
+          <div class="card z-index-2 ">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+              <img src="/assets/images/corte-masc.jpg" style="height: 150px; margin-left: 15px;" alt="">
+            </div>
+         <!-- ------------------------------------------------ -->
+            <div class="card-body">
+              <h6 class="mb-0 ">Corte de cabelo</h6>
+              <p class="text-sm ">Barbearia 33</p>
+              <hr class="dark horizontal">
+              <div class="d-flex ">
+                <i class="material-icons text-sm my-auto me-1"></i>
+                <p class="mb-0 text-sm"> Av. Prudente de Morais, 4830 - Loja 07 - Lagoa Nova, Natal - RN </p>
+              </div>
+              <a class="btn bg-gradient-primary mt-4 w-100" (click)="getVoucher(1)"
+              (mouseenter)="onMouseEnter(1)"
+              (mouseleave)="onMouseOut(1)"
+              type="button">{{valoresNormais[0]}}</a>
+            </div>
+          </div>
+        </div>
+         <!-- ------------------------------------------------ -->
+         <div class="col-lg-4 col-md-6 mt-4 mb-4">
+          <div class="card z-index-2 ">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+              <img src="/assets/images/corte-masc.jpg" style="height: 150px; margin-left: 15px;" alt="">
+            </div>
+         <!-- ------------------------------------------------ -->
+            <div class="card-body">
+              <h6 class="mb-0 ">Barba</h6>
+              <p class="text-sm ">Barbearia 33</p>
+              <hr class="dark horizontal">
+              <div class="d-flex ">
+                <i class="material-icons text-sm my-auto me-1"></i>
+                <p class="mb-0 text-sm"> Av. Prudente de Morais, 4830 - Loja 07 - Lagoa Nova, Natal - RN </p>
+              </div>
+              <a class="btn bg-gradient-primary mt-4 w-100" (click)="getVoucher(2)"
+              (mouseenter)="onMouseEnter(2)"
+              (mouseleave)="onMouseOut(2)"
+              type="button">{{valoresNormais[1]}}</a>
+            </div>
+          </div>
+        </div>
+         <!-- ------------------------------------------------ -->
+         <div class="col-lg-4 col-md-6 mt-4 mb-4">
+          <div class="card z-index-2 ">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+              <img src="/assets/images/massagem-pic.png" style="height: 170px; margin-left: 30px;" alt="">
+            </div>
+         <!-- ------------------------------------------------ -->
+            <div class="card-body">
+              <h6 class="mb-0 ">Massagem + Ventosaterapia</h6>
+              <p class="text-sm ">Emanuel Cavalcante</p>
+              <hr class="dark horizontal">
+              <div class="d-flex ">
+                <i class="material-icons text-sm my-auto me-1"></i>
+                <p class="mb-0 text-sm"> Atendimento a domicílio </p>
+              </div>
+              <a class="btn bg-gradient-primary mt-4 w-100" (click)="getVoucher(3)"
+              (mouseenter)="onMouseEnter(3)"
+              (mouseleave)="onMouseOut(3)"
+              type="button">{{valoresNormais[2]}}</a>
+            </div>
+          </div>
+        </div>
+
+         <!-- CARD ------------------------------------------------ -->
+         <div class="col-lg-4 col-md-6 mt-4 mb-4">
+          <div class="card z-index-2 ">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+              <img src="/assets/images/massagem-pic.png" style="height: 170px; margin-left: 30px;" alt="">
+            </div>
+         <!-- ------------------------------------------------ -->
+            <div class="card-body">
+              <h6 class="mb-0 ">Massagem</h6>
+              <p class="text-sm ">Emanuel Cavalcante</p>
+              <hr class="dark horizontal">
+              <div class="d-flex ">
+                <i class="material-icons text-sm my-auto me-1"></i>
+                <p class="mb-0 text-sm"> Atendimento a domicílio </p>
+              </div>
+              <a class="btn bg-gradient-primary mt-4 w-100" (click)="getVoucher(4)"
+              (mouseenter)="onMouseEnter(4)"
+              (mouseleave)="onMouseOut(4)"
+              type="button">{{valoresNormais[3]}}</a>
+            </div>
+          </div>
+        </div>
+        <!-- CARD -------------------------------------------------->
+
+        <!-- CARD ------------------------------------------------ -->
+        <div class="col-lg-4 col-md-6 mt-4 mb-4">
+          <div class="card z-index-2 ">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+              <img src="/assets/images/ventosa-pic.jpg" style="height: 170px; margin-left: 30px;" alt="">
+            </div>
+         <!-- ------------------------------------------------ -->
+            <div class="card-body">
+              <h6 class="mb-0 ">Ventosaterapia simples</h6>
+              <p class="text-sm ">Emanuel Cavalcante</p>
+              <hr class="dark horizontal">
+              <div class="d-flex ">
+                <i class="material-icons text-sm my-auto me-1"></i>
+                <p class="mb-0 text-sm"> Atendimento a domicílio </p>
+              </div>
+              <a class="btn bg-gradient-primary mt-4 w-100" (click)="getVoucher(5)"
+              (mouseenter)="onMouseEnter(5)"
+              (mouseleave)="onMouseOut(5)"
+              type="button">{{valoresNormais[4]}}</a>
+            </div>
+          </div>
+        </div>
+        <!-- CARD -------------------------------------------------->
+
+        <!-- CARD ------------------------------------------------ -->
+        <div class="col-lg-4 col-md-6 mt-4 mb-4">
+          <div class="card z-index-2 ">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+              <img src="/assets/images/bandagem-pic.jpg" style="height: 170px; margin-left: 30px;" alt="">
+            </div>
+         <!-- ------------------------------------------------ -->
+            <div class="card-body">
+              <h6 class="mb-0 ">Bandagem elástica funcional</h6>
+              <p class="text-sm ">Emanuel Cavalcante</p>
+              <hr class="dark horizontal">
+              <div class="d-flex ">
+                <i class="material-icons text-sm my-auto me-1"></i>
+                <p class="mb-0 text-sm"> Atendimento a domicílio </p>
+              </div>
+              <a class="btn bg-gradient-primary mt-4 w-100" (click)="getVoucher(6)"
+              (mouseenter)="onMouseEnter(6)"
+              (mouseleave)="onMouseOut(6)"
+              type="button">{{valoresNormais[5]}}</a>
+            </div>
+          </div>
+        </div>
+        <!-- CARD -------------------------------------------------->
+
+        <!-- CARD ------------------------------------------------ -->
+        <div class="col-lg-4 col-md-6 mt-4 mb-4">
+          <div class="card z-index-2 ">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+              <img src="/assets/images/massagem-pic.png" style="height: 170px; margin-left: 30px;" alt="">
+            </div>
+         <!-- ------------------------------------------------ -->
+            <div class="card-body">
+              <h6 class="mb-0 ">Eletroterapia + Massagem + Ventosaterapia</h6>
+              <p class="text-sm ">Emanuel Cavalcante</p>
+              <hr class="dark horizontal">
+              <div class="d-flex ">
+                <i class="material-icons text-sm my-auto me-1"></i>
+                <p class="mb-0 text-sm"> Atendimento a domicílio </p>
+              </div>
+              <a class="btn bg-gradient-primary mt-4 w-100" (click)="getVoucher(7)"
+              (mouseenter)="onMouseEnter(7)"
+              (mouseleave)="onMouseOut(7)"
+              type="button">{{valoresNormais[6]}}</a>
+            </div>
+          </div>
+        </div>
+        <!-- CARD -------------------------------------------------->
+
+        <!-- CARD ------------------------------------------------ -->
+        <div class="col-lg-4 col-md-6 mt-4 mb-4">
+          <div class="card z-index-2 ">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+              <img src="/assets/images/terapia-pic.jpg" style="height: 170px; margin-left: 5px;" alt="">
+            </div>
+         <!-- ------------------------------------------------ -->
+            <div class="card-body">
+              <h6 class="mb-0 ">Sessão com psicólogo</h6>
+              <p class="text-sm ">Marcos Sankler</p>
+              <hr class="dark horizontal">
+              <div class="d-flex ">
+                <i class="material-icons text-sm my-auto me-1"></i>
+                <p class="mb-0 text-sm"> Tirol Office - Av. Afonso Pena, 1206 - Tirol, Natal - RN, 59020-265 </p>
+              </div>
+              <a class="btn bg-gradient-primary mt-4 w-100" (click)="getVoucher(8)"
+              (mouseenter)="onMouseEnter(8)"
+              (mouseleave)="onMouseOut(8)"
+              type="button">{{valoresNormais[7]}}</a>
+            </div>
+          </div>
+        </div>
+        <!-- CARD -------------------------------------------------->
+
+         <!-- CARD ------------------------------------------------ -->
+         <div class="col-lg-4 col-md-6 mt-4 mb-4">
+          <div class="card z-index-2 ">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+              <img src="/assets/images/fisio-pic.jpg" style="height: 170px; margin-left: 5px;" alt="">
+            </div>
+         <!-- ------------------------------------------------ -->
+            <div class="card-body">
+              <h6 class="mb-0 ">Sessão de fisioterapia</h6>
+              <p class="text-sm ">Ortovita</p>
+              <hr class="dark horizontal">
+              <div class="d-flex ">
+                <i class="material-icons text-sm my-auto me-1"></i>
+                <p class="mb-0 text-sm"> Av. Afonso Pena, 754 - Tirol, Natal - RN, 59020-100 </p>
+              </div>
+              <a class="btn bg-gradient-primary mt-4 w-100" (click)="getVoucher(9)"
+              (mouseenter)="onMouseEnter(9)"
+              (mouseleave)="onMouseOut(9)"
+              type="button">{{valoresNormais[8]}}</a>
+            </div>
+          </div>
+        </div>
+        <!-- CARD -------------------------------------------------->
+
+         <!-- CARD ------------------------------------------------ -->
+         <div class="col-lg-4 col-md-6 mt-4 mb-4">
+          <div class="card z-index-2 ">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+              <img src="/assets/images/perso-pic.jpg" style="height: 170px; width: 265px;" alt="">
+            </div>
+         <!-- ------------------------------------------------ -->
+            <div class="card-body">
+              <h6 class="mb-0 ">Avaliação Física Simples</h6>
+              <p class="text-sm ">Leandro David</p>
+              <hr class="dark horizontal">
+              <div class="d-flex ">
+                <i class="material-icons text-sm my-auto me-1"></i>
+                <p class="mb-0 text-sm"> Combinar o local com o profissional</p>
+              </div>
+              <a class="btn bg-gradient-primary mt-4 w-100" (click)="getVoucher(10)"
+              (mouseenter)="onMouseEnter(10)"
+              (mouseleave)="onMouseOut(10)"
+              type="button">{{valoresNormais[9]}}</a>
+            </div>
+          </div>
+        </div>
+        <!-- CARD -------------------------------------------------->
+
+         <!-- CARD ------------------------------------------------ -->
+         <div class="col-lg-4 col-md-6 mt-4 mb-4">
+          <div class="card z-index-2 ">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+              <img src="/assets/images/perso-pic.jpg" style="height: 170px; width: 265px;" alt="">
+            </div>
+         <!-- ------------------------------------------------ -->
+            <div class="card-body">
+              <h6 class="mb-0 ">Avaliação Física Completa</h6>
+              <p class="text-sm ">Leandro David</p>
+              <hr class="dark horizontal">
+              <div class="d-flex ">
+                <i class="material-icons text-sm my-auto me-1"></i>
+                <p class="mb-0 text-sm"> Combinar o local com o profissional</p>
+              </div>
+              <a class="btn bg-gradient-primary mt-4 w-100" (click)="getVoucher(11)"
+              (mouseenter)="onMouseEnter(11)"
+              (mouseleave)="onMouseOut(11)"
+              type="button">{{valoresNormais[10]}}</a>
+            </div>
+          </div>
+        </div>
+        <!-- CARD -------------------------------------------------->
+
+         <!-- CARD ------------------------------------------------ -->
+         <div class="col-lg-4 col-md-6 mt-4 mb-4">
+          <div class="card z-index-2 ">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+              <img src="/assets/images/perso-pic.jpg" style="height: 145px; width: 265px;" alt="">
+            </div>
+         <!-- ------------------------------------------------ -->
+            <div class="card-body">
+              <h6 class="mb-0 ">Avaliação Física Completa + Retorno</h6>
+              <p class="text-sm ">Leandro David</p>
+              <hr class="dark horizontal">
+              <div class="d-flex ">
+                <i class="material-icons text-sm my-auto me-1"></i>
+                <p class="mb-0 text-sm"> Combinar o local com o profissional</p>
+              </div>
+              <a class="btn bg-gradient-primary mt-4 w-100" (click)="getVoucher(12)"
+              (mouseenter)="onMouseEnter(12)"
+              (mouseleave)="onMouseOut(12)"
+              type="button">{{valoresNormais[11]}}</a>
+            </div>
+          </div>
+        </div>
+        <!-- CARD -------------------------------------------------->
+
+         <!-- CARD ------------------------------------------------ -->
+         <div class="col-lg-4 col-md-6 mt-4 mb-4">
+          <div class="card z-index-2 ">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+              <img src="/assets/images/perso-pic.jpg" style="height: 170px; width: 265px;" alt="">
+            </div>
+         <!-- ------------------------------------------------ -->
+            <div class="card-body">
+              <h6 class="mb-0 ">Acompanhamento em um treino</h6>
+              <p class="text-sm ">Leandro David</p>
+              <hr class="dark horizontal">
+              <div class="d-flex ">
+                <i class="material-icons text-sm my-auto me-1"></i>
+                <p class="mb-0 text-sm"> Combinar o local com o profissional</p>
+              </div>
+              <a class="btn bg-gradient-primary mt-4 w-100" (click)="getVoucher(13)"
+              (mouseenter)="onMouseEnter(13)"
+              (mouseleave)="onMouseOut(13)"
+              type="button">{{valoresNormais[12]}}</a>
+            </div>
+          </div>
+        </div>
+        <!-- CARD -------------------------------------------------->
+
+
+      </div>
+
+
+    </div>
+  </main>
+
+  <!--   Core JS Files   -->
+  <script src="/assets/user-page/js/core/popper.min.js"></script>
+  <script src="/assets/user-page/js/core/bootstrap.min.js"></script>
+  <script src="/assets/user-page/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="/assets/user-page/js/plugins/smooth-scrollbar.min.js"></script>
+  <script src="/assets/user-page/js/plugins/chartjs.min.js"></script>
+
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="/assets/user-page/js/material-dashboard.min.js?v=3.0.0"></script>
+</body>
+
